@@ -1,0 +1,900 @@
+Program.Sub.ScreenSU.Start
+Gui.SS_Form1..Create
+Gui.SS_Form1..Caption("IAM Pension- Weekly Hours Report")
+Gui.SS_Form1..Size(5685,6120)
+Gui.SS_Form1..Position(0,0)
+Gui.SS_Form1..AlwaysOnTop(False)
+Gui.SS_Form1..FontName("Arial")
+Gui.SS_Form1..FontSize(8)
+Gui.SS_Form1..ForeColor(0)
+Gui.SS_Form1..Backcolor(-2147483633)
+Gui.SS_Form1..ControlBox(True)
+Gui.SS_Form1..MaxButton(False)
+Gui.SS_Form1..MinButton(False)
+Gui.SS_Form1..MousePointer(0)
+Gui.SS_Form1..Moveable(True)
+Gui.SS_Form1..Sizeable(False)
+Gui.SS_Form1..ShowInTaskBar(True)
+Gui.SS_Form1..TitleBar(True)
+Gui.SS_Form1..Event(unload,SS_Form1_Unload)
+Gui.SS_Form1.lbl_dtpEndDate.Create(label)
+Gui.SS_Form1.lbl_dtpEndDate.Caption("Period End Date")
+Gui.SS_Form1.lbl_dtpEndDate.Visible(True)
+Gui.SS_Form1.lbl_dtpEndDate.Size(1800,195)
+Gui.SS_Form1.lbl_dtpEndDate.Zorder(1)
+Gui.SS_Form1.lbl_dtpEndDate.Position(105,135)
+Gui.SS_Form1.lbl_dtpEndDate.Enabled(True)
+Gui.SS_Form1.lbl_dtpEndDate.Alignment(0)
+Gui.SS_Form1.lbl_dtpEndDate.FontName("Arial")
+Gui.SS_Form1.lbl_dtpEndDate.FontSize(8)
+Gui.SS_Form1.lbl_dtpEndDate.Backcolor(-2147483633)
+Gui.SS_Form1.lbl_dtpEndDate.BackStyle(0)
+Gui.SS_Form1.lbl_dtpEndDate.Tooltip("")
+Gui.SS_Form1.lbl_dtpEndDate.ControlGroup(0)
+Gui.SS_Form1.dtpEndDate.Create(datepicker)
+Gui.SS_Form1.dtpEndDate.Visible(True)
+Gui.SS_Form1.dtpEndDate.Size(1800,345)
+Gui.SS_Form1.dtpEndDate.Zorder(0)
+Gui.SS_Form1.dtpEndDate.Position(100,335)
+Gui.SS_Form1.dtpEndDate.Enabled(True)
+Gui.SS_Form1.dtpEndDate.Checkbox(False)
+Gui.SS_Form1.dtpEndDate.TabStop(True)
+Gui.SS_Form1.dtpEndDate.TabIndex(1)
+Gui.SS_Form1.dtpEndDate.Tooltip("")
+Gui.SS_Form1.dtpEndDate.ControlGroup(0)
+Gui.SS_Form1.dtpEndDate.DefaultValue("")
+Gui.SS_Form1.lbl_ddlWeekNo.Create(label)
+Gui.SS_Form1.lbl_ddlWeekNo.Caption("# of Weeks")
+Gui.SS_Form1.lbl_ddlWeekNo.Visible(True)
+Gui.SS_Form1.lbl_ddlWeekNo.Size(1800,200)
+Gui.SS_Form1.lbl_ddlWeekNo.Zorder(1)
+Gui.SS_Form1.lbl_ddlWeekNo.Position(100,765)
+Gui.SS_Form1.lbl_ddlWeekNo.Enabled(True)
+Gui.SS_Form1.lbl_ddlWeekNo.Alignment(0)
+Gui.SS_Form1.lbl_ddlWeekNo.FontName("Arial")
+Gui.SS_Form1.lbl_ddlWeekNo.FontSize(8)
+Gui.SS_Form1.lbl_ddlWeekNo.Backcolor(-2147483633)
+Gui.SS_Form1.lbl_ddlWeekNo.BackStyle(0)
+Gui.SS_Form1.lbl_ddlWeekNo.Tooltip("")
+Gui.SS_Form1.lbl_ddlWeekNo.ControlGroup(0)
+Gui.SS_Form1.ddlWeekNo.Create(dropdownlist)
+Gui.SS_Form1.ddlWeekNo.Visible(True)
+Gui.SS_Form1.ddlWeekNo.Size(1800,330)
+Gui.SS_Form1.ddlWeekNo.Zorder(0)
+Gui.SS_Form1.ddlWeekNo.Position(100,965)
+Gui.SS_Form1.ddlWeekNo.Enabled(True)
+Gui.SS_Form1.ddlWeekNo.FontName("Arial")
+Gui.SS_Form1.ddlWeekNo.FontSize(8)
+Gui.SS_Form1.ddlWeekNo.TabStop(True)
+Gui.SS_Form1.ddlWeekNo.TabIndex(2)
+Gui.SS_Form1.ddlWeekNo.Tooltip("")
+Gui.SS_Form1.ddlWeekNo.ControlGroup(0)
+Gui.SS_Form1.ddlWeekNo.DefaultValue("")
+Gui.SS_Form1.lbl_txtDeptStart.Create(label)
+Gui.SS_Form1.lbl_txtDeptStart.Caption("Beginning Department")
+Gui.SS_Form1.lbl_txtDeptStart.Visible(True)
+Gui.SS_Form1.lbl_txtDeptStart.Size(1800,200)
+Gui.SS_Form1.lbl_txtDeptStart.Zorder(1)
+Gui.SS_Form1.lbl_txtDeptStart.Position(100,1380)
+Gui.SS_Form1.lbl_txtDeptStart.Enabled(True)
+Gui.SS_Form1.lbl_txtDeptStart.Alignment(0)
+Gui.SS_Form1.lbl_txtDeptStart.FontName("Arial")
+Gui.SS_Form1.lbl_txtDeptStart.FontSize(8)
+Gui.SS_Form1.lbl_txtDeptStart.Backcolor(-2147483633)
+Gui.SS_Form1.lbl_txtDeptStart.BackStyle(0)
+Gui.SS_Form1.lbl_txtDeptStart.Tooltip("")
+Gui.SS_Form1.lbl_txtDeptStart.ControlGroup(0)
+Gui.SS_Form1.txtDeptStart.Create(textbox)
+Gui.SS_Form1.txtDeptStart.Text("")
+Gui.SS_Form1.txtDeptStart.Visible(True)
+Gui.SS_Form1.txtDeptStart.Size(1800,330)
+Gui.SS_Form1.txtDeptStart.Zorder(0)
+Gui.SS_Form1.txtDeptStart.Position(100,1580)
+Gui.SS_Form1.txtDeptStart.Enabled(True)
+Gui.SS_Form1.txtDeptStart.Alignment(0)
+Gui.SS_Form1.txtDeptStart.FontName("Arial")
+Gui.SS_Form1.txtDeptStart.FontSize(8)
+Gui.SS_Form1.txtDeptStart.Backcolor(16777215)
+Gui.SS_Form1.txtDeptStart.BorderStyle(1)
+Gui.SS_Form1.txtDeptStart.TabStop(True)
+Gui.SS_Form1.txtDeptStart.TabIndex(3)
+Gui.SS_Form1.txtDeptStart.Tooltip("")
+Gui.SS_Form1.txtDeptStart.ControlGroup(0)
+Gui.SS_Form1.txtDeptStart.DefaultValue("")
+Gui.SS_Form1.txtDeptStart.Event(gotfocus,txtdeptstart_gotfocus)
+Gui.SS_Form1.txtDeptStart.Event(lostfocus,txtdeptstart_lostfocus)
+Gui.SS_Form1.cmd_txtDeptStart.Create(button)
+Gui.SS_Form1.cmd_txtDeptStart.Caption("^")
+Gui.SS_Form1.cmd_txtDeptStart.Visible(True)
+Gui.SS_Form1.cmd_txtDeptStart.Size(330,330)
+Gui.SS_Form1.cmd_txtDeptStart.Zorder(0)
+Gui.SS_Form1.cmd_txtDeptStart.Position(1985,1580)
+Gui.SS_Form1.cmd_txtDeptStart.Enabled(True)
+Gui.SS_Form1.cmd_txtDeptStart.FontName("Arial")
+Gui.SS_Form1.cmd_txtDeptStart.FontSize(8)
+Gui.SS_Form1.cmd_txtDeptStart.TabStop(True)
+Gui.SS_Form1.cmd_txtDeptStart.TabIndex(4)
+Gui.SS_Form1.cmd_txtDeptStart.Tooltip("")
+Gui.SS_Form1.cmd_txtDeptStart.ControlGroup(0)
+Gui.SS_Form1.cmd_txtDeptStart.DefaultValue("")
+Gui.SS_Form1.cmd_txtDeptStart.Event(click,cmd_txtDeptStart_Click)
+Gui.SS_Form1.lbl_txtDeptEnd.Create(label)
+Gui.SS_Form1.lbl_txtDeptEnd.Caption("Ending Department")
+Gui.SS_Form1.lbl_txtDeptEnd.Visible(True)
+Gui.SS_Form1.lbl_txtDeptEnd.Size(1800,200)
+Gui.SS_Form1.lbl_txtDeptEnd.Zorder(1)
+Gui.SS_Form1.lbl_txtDeptEnd.Position(2455,1380)
+Gui.SS_Form1.lbl_txtDeptEnd.Enabled(True)
+Gui.SS_Form1.lbl_txtDeptEnd.Alignment(0)
+Gui.SS_Form1.lbl_txtDeptEnd.FontName("Arial")
+Gui.SS_Form1.lbl_txtDeptEnd.FontSize(8)
+Gui.SS_Form1.lbl_txtDeptEnd.Backcolor(-2147483633)
+Gui.SS_Form1.lbl_txtDeptEnd.BackStyle(0)
+Gui.SS_Form1.lbl_txtDeptEnd.Tooltip("")
+Gui.SS_Form1.lbl_txtDeptEnd.ControlGroup(0)
+Gui.SS_Form1.txtDeptEnd.Create(textbox)
+Gui.SS_Form1.txtDeptEnd.Text("")
+Gui.SS_Form1.txtDeptEnd.Visible(True)
+Gui.SS_Form1.txtDeptEnd.Size(1800,330)
+Gui.SS_Form1.txtDeptEnd.Zorder(0)
+Gui.SS_Form1.txtDeptEnd.Position(2455,1580)
+Gui.SS_Form1.txtDeptEnd.Enabled(True)
+Gui.SS_Form1.txtDeptEnd.Alignment(0)
+Gui.SS_Form1.txtDeptEnd.FontName("Arial")
+Gui.SS_Form1.txtDeptEnd.FontSize(8)
+Gui.SS_Form1.txtDeptEnd.Backcolor(16777215)
+Gui.SS_Form1.txtDeptEnd.BorderStyle(1)
+Gui.SS_Form1.txtDeptEnd.TabStop(True)
+Gui.SS_Form1.txtDeptEnd.TabIndex(5)
+Gui.SS_Form1.txtDeptEnd.Tooltip("")
+Gui.SS_Form1.txtDeptEnd.ControlGroup(0)
+Gui.SS_Form1.txtDeptEnd.DefaultValue("")
+Gui.SS_Form1.txtDeptEnd.Event(gotfocus,txtdeptend_gotfocus)
+Gui.SS_Form1.cmd_txtDeptEnd.Create(button)
+Gui.SS_Form1.cmd_txtDeptEnd.Caption("^")
+Gui.SS_Form1.cmd_txtDeptEnd.Visible(True)
+Gui.SS_Form1.cmd_txtDeptEnd.Size(330,330)
+Gui.SS_Form1.cmd_txtDeptEnd.Zorder(0)
+Gui.SS_Form1.cmd_txtDeptEnd.Position(4340,1580)
+Gui.SS_Form1.cmd_txtDeptEnd.Enabled(True)
+Gui.SS_Form1.cmd_txtDeptEnd.FontName("Arial")
+Gui.SS_Form1.cmd_txtDeptEnd.FontSize(8)
+Gui.SS_Form1.cmd_txtDeptEnd.TabStop(True)
+Gui.SS_Form1.cmd_txtDeptEnd.TabIndex(6)
+Gui.SS_Form1.cmd_txtDeptEnd.Tooltip("")
+Gui.SS_Form1.cmd_txtDeptEnd.ControlGroup(0)
+Gui.SS_Form1.cmd_txtDeptEnd.DefaultValue("")
+Gui.SS_Form1.cmd_txtDeptEnd.Event(click,cmd_txtDeptEnd_Click)
+Gui.SS_Form1.cmdDelete.Create(button)
+Gui.SS_Form1.cmdDelete.Caption("Delete")
+Gui.SS_Form1.cmdDelete.Visible(True)
+Gui.SS_Form1.cmdDelete.Size(1005,360)
+Gui.SS_Form1.cmdDelete.Zorder(0)
+Gui.SS_Form1.cmdDelete.Position(105,4470)
+Gui.SS_Form1.cmdDelete.Enabled(True)
+Gui.SS_Form1.cmdDelete.FontName("Arial")
+Gui.SS_Form1.cmdDelete.FontSize(8)
+Gui.SS_Form1.cmdDelete.TabStop(True)
+Gui.SS_Form1.cmdDelete.TabIndex(8)
+Gui.SS_Form1.cmdDelete.Tooltip("")
+Gui.SS_Form1.cmdDelete.ControlGroup(0)
+Gui.SS_Form1.cmdDelete.DefaultValue("")
+Gui.SS_Form1.cmdDelete.Event(click,cmdDelete_Click)
+Gui.SS_Form1.cmdClear.Create(button)
+Gui.SS_Form1.cmdClear.Caption("Clear")
+Gui.SS_Form1.cmdClear.Visible(True)
+Gui.SS_Form1.cmdClear.Size(1005,360)
+Gui.SS_Form1.cmdClear.Zorder(0)
+Gui.SS_Form1.cmdClear.Position(1155,4470)
+Gui.SS_Form1.cmdClear.Enabled(True)
+Gui.SS_Form1.cmdClear.FontName("Arial")
+Gui.SS_Form1.cmdClear.FontSize(8)
+Gui.SS_Form1.cmdClear.TabStop(True)
+Gui.SS_Form1.cmdClear.TabIndex(9)
+Gui.SS_Form1.cmdClear.Tooltip("")
+Gui.SS_Form1.cmdClear.ControlGroup(0)
+Gui.SS_Form1.cmdClear.DefaultValue("")
+Gui.SS_Form1.cmdClear.Event(click,cmdClear_Click)
+Gui.SS_Form1.lvwDept.Create(listview)
+Gui.SS_Form1.lvwDept.Visible(True)
+Gui.SS_Form1.lvwDept.Size(5085,1995)
+Gui.SS_Form1.lvwDept.Zorder(0)
+Gui.SS_Form1.lvwDept.Position(105,2385)
+Gui.SS_Form1.lvwDept.Enabled(True)
+Gui.SS_Form1.lvwDept.BorderStyle(1)
+Gui.SS_Form1.lvwDept.FontName("Arial")
+Gui.SS_Form1.lvwDept.FontSize(8)
+Gui.SS_Form1.lvwDept.TabStop(True)
+Gui.SS_Form1.lvwDept.TabIndex(11)
+Gui.SS_Form1.lvwDept.Tooltip("")
+Gui.SS_Form1.lvwDept.View(3)
+Gui.SS_Form1.lvwDept.AddListViewColumn("Beginning Department",2500,0)
+Gui.SS_Form1.lvwDept.AddListViewColumn("Ending Department",2500,0)
+Gui.SS_Form1.lvwDept.Event(lostfocus,lvwDept_ItemClick)
+Gui.SS_Form1.lvwDept.Event(itemclick,lvwDept_ItemClick)
+Gui.SS_Form1.cmdOk.Create(button)
+Gui.SS_Form1.cmdOk.Caption("Ok")
+Gui.SS_Form1.cmdOk.Visible(True)
+Gui.SS_Form1.cmdOk.Size(1005,360)
+Gui.SS_Form1.cmdOk.Zorder(0)
+Gui.SS_Form1.cmdOk.Position(105,5085)
+Gui.SS_Form1.cmdOk.Enabled(True)
+Gui.SS_Form1.cmdOk.FontName("Arial")
+Gui.SS_Form1.cmdOk.FontSize(8)
+Gui.SS_Form1.cmdOk.TabStop(True)
+Gui.SS_Form1.cmdOk.TabIndex(10)
+Gui.SS_Form1.cmdOk.Tooltip("")
+Gui.SS_Form1.cmdOk.ControlGroup(0)
+Gui.SS_Form1.cmdOk.DefaultValue("")
+Gui.SS_Form1.cmdOk.Event(click,cmdOk_Click)
+Gui.SS_Form1.cmdAdd.Create(button)
+Gui.SS_Form1.cmdAdd.Caption("Add")
+Gui.SS_Form1.cmdAdd.Visible(True)
+Gui.SS_Form1.cmdAdd.Size(1125,345)
+Gui.SS_Form1.cmdAdd.Zorder(0)
+Gui.SS_Form1.cmdAdd.Position(105,1960)
+Gui.SS_Form1.cmdAdd.Enabled(True)
+Gui.SS_Form1.cmdAdd.FontName("Arial")
+Gui.SS_Form1.cmdAdd.FontSize(8)
+Gui.SS_Form1.cmdAdd.TabStop(True)
+Gui.SS_Form1.cmdAdd.TabIndex(7)
+Gui.SS_Form1.cmdAdd.Tooltip("")
+Gui.SS_Form1.cmdAdd.ControlGroup(0)
+Gui.SS_Form1.cmdAdd.DefaultValue("")
+Gui.SS_Form1.cmdAdd.Event(click,cmdAdd_Click)
+gui.SS_Form1..minx(0)
+gui.SS_Form1..miny(0)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Variable.Global.iKey.Declare(Long,"0")
+Variable.UDT.uEmpTime.Define("Employee",String,Employee)
+Variable.UDT.uEmpTime.Define("Last_Name",String,Last_Name)
+Variable.UDT.uEmpTime.Define("First_Name",String,First_Name)
+Variable.UDT.uEmpTime.Define("Middle_Initial",String,Middle_Initial)
+Variable.UDT.uEmpTime.Define("Suffix",String,Suffix)
+Variable.UDT.uEmpTime.Define("SSN",String,SSN)
+Variable.UDT.uEmpTime.Define("Week_1",Float,Week_1)
+Variable.UDT.uEmpTime.Define("Week_2",Float,Week_2)
+Variable.UDT.uEmpTime.Define("Week_3",Float,Week_3)
+Variable.UDT.uEmpTime.Define("Week_4",Float,Week_4)
+Variable.UDT.uEmpTime.Define("Week_5",Float,Week_5)
+Variable.UDT.uEmpTime.Define("Total_Weeks",Float,Total_Weeks)
+Variable.UDT.uEmpTime.Define("BIRUNID",Long,BIRUNID)
+
+Variable.uGlobal.uEmpTime.Declare("uEmpTime")
+Variable.UDT.uWeeks.Define("Week_No",Float)
+Variable.UDT.uWeeks.Define("Start_Date",Date)
+Variable.UDT.uWeeks.Define("End_Date",Date)
+Variable.uGlobal.uWeeks.Declare("uWeeks")
+Variable.UDT.uEmp.Define("Employee",String,Employee)
+Variable.UDT.uEmp.Define("SSN",String,Social_Security_NO)
+Variable.uGlobal.uEmp.Declare("uEmp")
+Variable.UDT.uDept.Define("DeptStart",String)
+Variable.UDT.uDept.Define("DeptEnd",String)
+Variable.uGlobal.uDept.Declare("uDept")
+Variable.Global.iBIRUNID.Declare(Long,0)
+Variable.Global.iLogID.Declare(Long,0)
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+F.ODBC.Connection!conX.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass,1000)
+
+'add 1 to five to our drop down
+Gui.SS_Form1.ddlWeekNo.AddItem("1")
+Gui.SS_Form1.ddlWeekNo.AddItem("2")
+Gui.SS_Form1.ddlWeekNo.AddItem("3")
+Gui.SS_Form1.ddlWeekNo.AddItem("4")
+Gui.SS_Form1.ddlWeekNo.AddItem("5")
+
+V.uGlobal.uEmp.Redim(-1,-1)
+V.uGlobal.uWeeks.Redim(-1,-1)
+V.uGlobal.uEmpTime.Redim(-1,-1)
+
+'set date to today
+Gui.SS_Form1.dtpEndDate.Value(V.Ambient.Date)
+Gui.SS_Form1..Show
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5971_IAM_Pension.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Main.End
+
+Program.Sub.cmd_txtDeptStart_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmd_txtDeptStart_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+'depatment browser for beginning
+F.Intrinsic.UI.Browser(70,"",V.Local.sRet)
+Function.Intrinsic.Control.If(V.Local.sRet.Trim,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.SS_Form1.txtDeptStart.Text(V.Local.sRet(0).Trim)
+	Gui.SS_Form1.txtDeptEnd.Text(V.Local.sRet(0).Trim)
+	Gui.SS_Form1.cmdAdd.SetFocus
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txtDeptStart_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5971_IAM_Pension.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmd_txtDeptStart_Click.End
+
+Program.Sub.cmd_txtDeptEnd_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmd_txtDeptStart_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+'depatment browser for end
+F.Intrinsic.UI.Browser(70,"",V.Local.sRet)
+Function.Intrinsic.Control.If(V.Local.sRet.Trim,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.SS_Form1.txtDeptEnd.Text(V.Local.sRet(0).Trim)
+Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txtDeptStart_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5971_IAM_Pension.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmd_txtDeptEnd_Click.End
+
+Program.Sub.cmdDelete_Click.Start
+gui.SS_Form1.lvwDept.RemoveItem(V.Global.iKey)
+
+Program.Sub.cmdDelete_Click.End
+
+Program.Sub.cmdClear_Click.Start
+gui.SS_Form1.lvwDept.ClearItems
+gui.SS_Form1.txtDeptEnd.text("")
+gui.SS_Form1.txtDeptStart.Text("")
+gui.SS_Form1.txtDeptStart.SetFocus
+
+Program.Sub.cmdClear_Click.End
+
+Program.Sub.cmdOk_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdOk_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iWeeks.Declare(Long)
+V.Local.dDate.Declare(Date)
+
+Gui.SS_Form1..Visible(False)
+
+f.Global.BI.getrunid(v.Global.iBIRUNID)
+
+
+f.Global.BI.StartLogging(v.Global.iBIRUNID,-1,-1,v.Global.iLogID)
+
+
+V.Local.dDate.Set(v.Screen.SS_Form1!dtpEndDate.Value)
+
+V.Local.iWeeks.Set(v.Screen.SS_Form1!ddlWeekNo.Text)
+
+
+
+F.Intrinsic.Control.If(v.Local.iWeeks,=,"")
+	F.Intrinsic.UI.Msgbox("# of Weeks must be selected.")
+	Gui.SS_Form1..Visible(tRUE)
+	Gui.SS_Form1.ddlWeekNo.SetFocus
+	F.Intrinsic.Control.ExitSub
+Function.Intrinsic.Control.Else
+	F.Intrinsic.UI.InvokeWaitDialog("Processing...","IAM Pension Weekly Report")
+	'determine week buckets
+	Function.Intrinsic.Control.CallSub(Determineweeks,"iWeeks",v.Local.iWeeks,"dDate",v.Local.dDate)
+	V.uGlobal.uDept.Redim(-1,-1)
+	F.Intrinsic.Control.CallSub(Getdept)
+
+	'get the beg of week as this will be our first date.
+	'load our emp udt is this the first time we are in here?
+	'dont need to reload it if we already loaded it once.
+	F.Intrinsic.Control.If(V.uGlobal.uEmp.UBound,=,-1)
+		F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst","Select Employee, Social_Security_No From V_Employee_MSTR Order BY Employee")
+		F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,=,False)
+			F.Intrinsic.Variable.LoadUDTFromRecordset("conX","rst","v.uglobal.uEmp",False)
+		Function.Intrinsic.Control.EndIf
+	Function.Intrinsic.Control.EndIf
+	Function.Intrinsic.Control.CallSub(Get_emptime)
+
+	F.Intrinsic.Control.CallSub(Save_udt)
+
+	F.Intrinsic.Control.CallSub(Callbi)
+
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdOk_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5971_IAM_Pension.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdOk_Click.End
+
+Program.Sub.SS_Form1_Unload.Start
+F.Intrinsic.Control.SetErrorHandler("SS_Form1_Unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.ODBC.Connection!conx.Close
+
+f.Intrinsic.Control.End
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("SS_Form1_Unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5971_IAM_Pension.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.End
+Function.Intrinsic.Control.EndIf
+Program.Sub.SS_Form1_Unload.End
+
+Program.Sub.cmdAdd_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdAdd_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sStart.Declare(String)
+V.Local.sEnd.Declare(String)
+
+V.Local.sStart.Set(V.Screen.SS_Form1!txtDeptStart.Text)
+V.Local.sEnd.Set(V.Screen.SS_Form1!txtDeptEnd.Text)
+
+Function.Intrinsic.Control.If(V.Local.sStart.Trim,=,"")
+	F.Intrinsic.UI.Msgbox("Please select a Beginning Department.")
+	Gui.SS_Form1.txtDeptStart.SetFocus
+	F.Intrinsic.Control.ExitSub
+Function.Intrinsic.Control.ElseIf(V.Local.sEnd.Trim,=,"")
+	F.Intrinsic.UI.Msgbox("Please select an Ending Department.")
+	Gui.SS_Form1.txtDeptEnd.SetFocus
+	F.Intrinsic.Control.ExitSub
+Function.Intrinsic.Control.Else
+	F.Intrinsic.Math.Add(V.Global.ikey,1,V.Global.iKey)
+	Gui.SS_Form1.lvwDept.AddListItem(V.Global.iKey,V.Local.sStart.Trim)
+	Gui.SS_Form1.lvwDept.SetListItemSubItemText(V.Global.iKey,1,V.Local.sEnd.Trim)
+	Gui.SS_Form1.txtDeptEnd.Text("")
+	Gui.SS_Form1.txtDeptStart.Text("")
+	Gui.SS_Form1.txtDeptStart.SetFocus
+Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdAdd_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5971_IAM_Pension.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdAdd_Click.End
+
+Program.Sub.lvwDept_ItemClick.Start
+V.Global.iKey.Set(V.Screen.SS_Form1!lvwDept.SelectedItemKey)
+
+Program.Sub.lvwDept_ItemClick.End
+
+Program.Sub.Get_EmpTime.Start
+F.Intrinsic.Control.SetErrorHandler("Get_EmpTime_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.fJobHrs.Declare(Float)
+V.Local.fTIMAT.Declare(Float)
+V.Local.iE.Declare(Long)
+V.Local.iW.Declare(Long)
+V.Local.iUB.Declare(Long)
+V.Local.iD.Declare(Long)
+V.Local.fHour.Declare(Float)
+V.Local.fMin.Declare(Float)
+V.Local.fTotal.Declare(Float)
+V.Local.fGTotal.Declare(Float)
+V.Local.sName.Declare(String)
+
+F.Intrinsic.Control.For(v.Local.iE,0,v.uGlobal.uEmp.UBound,1)
+	F.Intrinsic.UI.ChangeWaitStatus("Processing...",v.Local.iE,0,v.uGlobal.uEmp.UBound)
+	Function.Intrinsic.Control.If(V.uGlobal.uEmpTime.UBound,=,-1)
+		V.uGlobal.uEmpTime.Redim(0,0)
+		V.Local.iUB.Set(0)
+	Function.Intrinsic.Control.Else
+		F.Intrinsic.Math.Add(V.uGlobal.uEmpTime.UBound,1,V.Local.iUB)
+		V.uGlobal.uEmpTime.RedimPreserve(0,V.Local.iUB)
+	Function.Intrinsic.Control.EndIf
+
+	V.uGlobal.uEmpTime(v.Local.iUB)!Employee.Set(V.uGlobal.uEmp(v.Local.iE)!Employee)
+	V.uGlobal.uEmpTime(v.Local.iUB)!SSN.Set(V.uGlobal.uEmp(v.Local.iE)!SSN)
+	'got to get name from PYRL_EMP_NAME"
+	F.Intrinsic.String.Build("Select Name From V_EMPLOYEE_MSTR Where Employee = '{0}'",V.uGlobal.uEmp(v.Local.iE)!Employee,V.Local.sSQL)
+	F.ODBC.Connection!conX.OpenLocalRecordsetRO("rstName",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.conX!rstname.EOF,=,False)
+		V.Local.sName.Redim(-1,-1)
+		F.Intrinsic.String.Split(V.ODBC.conX!rstName.FieldValTrim!Name," ",V.Local.sName)
+		
+		F.Intrinsic.Control.SelectCase(V.Local.sName.UBound)
+			'Only has first and last name. Anything else makes no sense
+			F.Intrinsic.Control.Case(1)
+				V.uGlobal.uEmpTime(V.Local.iUB)!First_Name.Set(V.Local.sName(0))
+				V.uGlobal.uEmpTime(V.Local.iUB)!Last_Name.Set(V.Local.sName(1))
+			'Could have first last suffix, or first middle last
+			F.Intrinsic.Control.Case(2)
+				'Strip the period character out of the return if there is one. Otherwise this isn't getting right
+				F.Intrinsic.String.Replace(V.Local.sName(1),".","",V.Local.sName(1))
+				'If the second index is greater than one it's not the middle initial
+				F.Intrinsic.Control.If(V.Local.sName(1).Length,>,1)
+					V.uGlobal.uEmpTime(V.Local.iUB)!First_Name.Set(V.Local.sName(0))
+					V.uGlobal.uEmpTime(V.Local.iUB)!Last_Name.Set(V.Local.sName(1))
+					V.uGlobal.uEmpTime(V.Local.iUB)!Suffix.Set(V.Local.sName(2))
+				F.Intrinsic.Control.Else
+					V.uGlobal.uEmpTime(V.Local.iUB)!First_Name.Set(V.Local.sName(0))
+					V.uGlobal.uEmpTime(V.Local.iUB)!Middle_Initial.Set(V.Local.sName(1))
+					V.uGlobal.uEmpTime(V.Local.iUB)!Last_Name.Set(V.Local.sName(2))
+				F.Intrinsic.Control.EndIf			
+			F.Intrinsic.Control.Case(3)
+				'Strip the period character out of the return if there is one. Otherwise this isn't getting right
+				F.Intrinsic.String.Replace(V.Local.sName(1),".","",V.Local.sName(1))
+				V.uGlobal.uEmpTime(V.Local.iUB)!First_Name.Set(V.Local.sName(0))
+				V.uGlobal.uEmpTime(V.Local.iUB)!Middle_Initial.Set(V.Local.sName(1))
+				V.uGlobal.uEmpTime(V.Local.iUB)!Last_Name.Set(V.Local.sName(2))
+				V.uGlobal.uEmpTime(V.Local.iUB)!Suffix.Set(V.Local.sName(3))
+		F.Intrinsic.Control.EndSelect
+	Function.Intrinsic.Control.EndIf
+	F.ODBC.conX!rstName.Close
+
+	'gonig to be looping through a days of week bucket udt
+	F.Intrinsic.Control.For(v.Local.iW,0,v.uGlobal.uWeeks.UBound,1)
+		'for every department
+		F.Intrinsic.Control.For(v.Local.iD,0,v.uGlobal.uDept.UBound,1)
+			'get a sum of all detail hours
+			F.Intrinsic.String.Build("Select Sum (Hours_Worked) As Hours_Worked From V_JOB_Detail Where Empl ='{0}' And Dept_Emp Between '{1}' And '{2}' And Charge_Date Between '{3}' And '{4}' Group By Empl",V.uGlobal.uEmp(v.Local.iE)!Employee,V.uGlobal.uDept(v.Local.iD)!DeptStart,V.uGlobal.uDept(v.Local.iD)!DeptEnd,V.uGlobal.uWeeks(v.Local.iW)!Start_Date.PervasiveDate,V.uGlobal.uWeeks(v.Local.iW)!End_Date.PervasiveDate,V.Local.sSQL)
+			F.ODBC.Connection!conX.OpenLocalRecordsetRO("rstJDetail",V.Local.sSQL)
+			F.Intrinsic.Control.If(V.ODBC.conX!rstJDetail.EOF,=,False)
+				'grab the information add to a running total
+				F.Intrinsic.Math.Add(v.Local.fJobHrs,v.ODBC.conX!rstJDetail.FieldValFloat!Hours_Worked,v.Local.fJobHrs)
+			Function.Intrinsic.Control.EndIf
+			F.ODBC.conX!rstJDetail.Close
+		F.Intrinsic.Control.Next(v.Local.iD)
+		'also get the Time Attendnace Information
+		F.Intrinsic.String.Build("Select Sum(Hours_HH)As Hours_HH, Sum(Hours_MM) As Hours_MM From V_Time_Attendance Where Rec_Type = 'A' And Paid = 'Y' And Employee = '{0}' And Charge_Date Between '{1}' And '{2}' Group By Employee",V.uGlobal.uEmp(v.Local.iE)!Employee,V.uGlobal.uWeeks(v.Local.iW)!Start_Date.PervasiveDate,V.uGlobal.uWeeks(v.Local.iW)!End_Date.PervasiveDate,V.Local.sSQL)
+		F.ODBC.Connection!conX.OpenLocalRecordsetRO("rstTIMAT",V.Local.sSQL)
+		Function.Intrinsic.Control.If(V.ODBC.conX!rstTIMAT.EOF,=,False)
+			V.Local.fHour.Set(v.ODBC.conX!rstTIMAT.FieldValFloat!Hours_HH)
+			F.Intrinsic.Math.Div(v.ODBC.conX!rstTIMAT.FieldValFloat!Hours_MM,60,v.Local.fMin)
+			F.Intrinsic.Math.Add(v.Local.fHour,v.Local.fMin,v.Local.fTIMAT)
+		Function.Intrinsic.Control.Else
+			V.Local.fTIMAT.Set(0)
+		Function.Intrinsic.Control.EndIf
+		F.ODBC.conX!rstTIMAT.Close
+		'we have to addd all this toegther store it in our correct bucket then be done
+		F.Intrinsic.Math.Add(v.Local.fTIMAT,v.Local.fJobHrs,v.Local.fTotal)
+		'round up to the nearest whole horu
+		F.Intrinsic.Math.Round(v.Local.fTotal,0,v.Local.fTotal)
+		'if it's greater than 40 we are just oging to set it to 40
+		Function.Intrinsic.Control.If(v.Local.fTotal,>,40)
+			V.Local.fTotal.Set(40)
+		Function.Intrinsic.Control.EndIf
+
+'		store this
+		V.uGlobal.uEmpTime(v.Local.iUB)!Week_[v.local.iW.++].set(V.Local.fTotal)
+		v.Local.iW.Set(v.Local.iW.--)
+
+
+		F.Intrinsic.Math.Add(v.Local.fGTotal,v.Local.fTotal,v.Local.fGTotal)
+		'reset job hours
+		V.Local.fJobHrs.Set(0)
+	F.Intrinsic.Control.Next(v.Local.iW)
+	'store the total value
+	V.uGlobal.uEmpTime(v.Local.iUB)!Total_Weeks.Set(v.Local.fGTotal)
+
+	'clear it out
+	V.Local.fgtotal.set(0)
+
+
+F.Intrinsic.Control.Next(v.Local.iE)
+
+'remove any employee time whose total weeks is zero
+F.Intrinsic.Variable.UDTMultiFlag(V.uGlobal.uEmpTime!Total_Weeks,"0")
+F.Intrinsic.Variable.UDTDeleteFlagged(V.uGlobal.uEmpTime)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Get_EmpTime_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5971_IAM_Pension.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Get_EmpTime.End
+
+Program.Sub.DetermineWeeks.Start
+F.Intrinsic.Control.SetErrorHandler("DetermineWeeks_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iWeeks.Declare(Long)
+V.Local.iC.Declare(Long)
+V.Local.dEndDate.Declare(Date)
+V.Local.iDays.Declare(Long)
+V.Local.dBegWeek.Declare(Date)
+V.Local.dEndWeek.Declare(Date)
+V.Local.dRet.Declare(Date)
+V.Local.iUB.Declare(Long)
+
+V.Local.iWeeks.Set(v.Args.iWeeks)
+V.Local.dEndDate.Set(v.Args.dDate)
+'here we are going to determine our week buckets that we need.
+'store them into our uWeeks UDT.
+'by week number start date and end date
+
+'have to minus 1 our num of weeks because it will take us an extra week ahead.
+F.Intrinsic.Math.Sub(v.Local.iWeeks,1,v.Local.iC)
+'multiply our number of weeks by seven
+F.Intrinsic.Math.Mult(v.Local.iC,7,v.Local.iDays)
+
+F.Intrinsic.Control.For(v.Local.iC,1,v.Local.iWeeks,1)
+	F.Intrinsic.Date.DateAdd("D",v.Local.iDays.Not,v.Local.dEndDate,v.Local.dRet)
+	'then get the beg of the week of the dret
+	'the thing returns us sunday so add a date to make it the
+	f.Intrinsic.Date.BeginningOfWeek(v.Local.dRet,v.Local.dBegWeek)
+	F.Intrinsic.Date.DateAdd("D",1,v.Local.dBegWeek,v.Local.dBegWeek)
+
+	'same fo the end of week on a sunday
+	f.Intrinsic.Date.EndOfWeek(v.Local.dRet,v.Local.dEndWeek)
+	F.Intrinsic.date.DateAdd("D",1,v.Local.dEndWeek,v.Local.dEndWeek)
+
+	'store it up
+	Function.Intrinsic.Control.If(V.uGlobal.uWeeks.UBound,=,-1)
+		V.uGlobal.uWeeks.Redim(0,0)
+		V.Local.iUB.Set(0)
+	Function.Intrinsic.Control.Else
+		F.Intrinsic.Math.add(V.uGlobal.uWeeks.UBound,1,V.Local.iUB)
+		V.uGlobal.uWeeks.RedimPreserve(0,V.Local.iUB)
+	Function.Intrinsic.Control.EndIf
+
+	V.uGlobal.uWeeks(v.Local.iUB)!Week_No.Set(V.Local.iC)
+	V.uGlobal.uWeeks(v.Local.iUB)!Start_Date.Set(v.Local.dBegWeek)
+	V.uGlobal.uWeeks(v.Local.iUB)!End_Date.Set(v.Local.dEndWeek)
+	'got eeem
+	'subtract from out idays by 7? cause we got our first week>
+	F.Intrinsic.Math.Sub(v.Local.iDays,7,v.Local.iDays)
+F.Intrinsic.Control.Next(V.Local.iC)
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("DetermineWeeks_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5971_IAM_Pension.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.DetermineWeeks.End
+
+Program.Sub.GetDept.Start
+F.Intrinsic.Control.SetErrorHandler("GetDept_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sRows.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.iOrd.Declare(Long)
+V.Local.sRange.Declare(String)
+V.Local.iUB.Declare(Long)
+
+Gui.SS_Form1.lvwDept.RetrieveAllListItems(V.Local.sRows)
+Function.Intrinsic.Control.If(V.Local.sRows.Trim,<>,"***NORETURN***")
+	Function.Intrinsic.String.Split(V.Local.sRows,"*!*",V.Local.sRows)
+	f.Intrinsic.Control.For(V.Local.iC,0,V.Local.srows.UBound,1)
+		Gui.SS_Form1.lvwDept.RetrieveItemOrdinal(V.Local.sRows(v.Local.iC),V.Local.iOrd)
+		V.Local.sRange.Set(V.Screen.SS_Form1!lvwDept.ListItemTextExtended(v.Local.iOrd))
+		Function.Intrinsic.String.Split(V.Local.sRange,"*!*",V.Local.sRange)
+		F.Intrinsic.Control.If(V.uGlobal.uDept.UBound,=,-1)
+			V.Local.iUB.Set(0)
+			V.uGlobal.uDept.Redim(0,0)
+		Function.Intrinsic.Control.Else
+			F.Intrinsic.Math.Add(V.uGlobal.uDept.UBound,1,V.Local.iUB)
+			V.uGlobal.uDept.RedimPreserve(0,V.Local.iUB)
+		Function.Intrinsic.Control.EndIf
+
+		V.uGlobal.uDept(v.Local.iUB)!DeptStart.Set(V.Local.sRange(0))
+		V.uGlobal.uDept(v.Local.iUB)!DeptEnd.Set(V.Local.sRange(1))
+
+	F.Intrinsic.Control.Next(V.Local.iC)
+Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("GetDept_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5971_IAM_Pension.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.GetDept.End
+
+Program.Sub.Save_UDT.Start
+F.Intrinsic.Control.SetErrorHandler("Save_UDT_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSQL.Declare(String)
+
+
+F.ODBC.Connection!conX.Execute("Delete From GCG_5971_IAM_Pen_RPT")
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uEmpTime!BIRUNID,V.Global.iBIRUNID)
+F.ODBC.Connection!conX.OpenLocalRecordsetRW("rst","Select * from GCG_5971_IAM_Pen_RPT")
+F.Intrinsic.Control.If(V.uGlobal.uEmptime.UBound,<>,-1)
+	f.Intrinsic.Variable.saveudttorecordset("conx","rst","v.uglobal.uEmpTime")
+Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ExitSub
+
+'stop logging
+
+
+
+F.Intrinsic.Control.Label("Save_UDT_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5971_IAM_Pension.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Save_UDT.End
+
+Program.Sub.CALLBI.Start
+F.Intrinsic.Control.SetErrorHandler("CALLBI_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sParam.Declare(String)
+V.Local.sVal.Declare(String)
+V.Local.sWeeks.Declare(String)
+V.Local.iR.Declare(Long)
+V.Local.sRet.Declare(String)
+V.Local.sStart.Declare(String)
+V.Local.sEnd.Declare(String)
+V.Local.sWeekE.Declare(String)
+V.Local.sRPTID.Declare(String)
+
+
+
+V.Local.sWeeks.Redim(1,5)
+V.Local.sWeekE.Redim(1,5)
+
+F.Global.BI.GetIDFromName("GCG_5971_IAM_Pension.rpt",V.Local.sRPTID)
+
+F.Intrinsic.Control.If(V.Local.sRPTID,<=,0)
+	F.Intrinsic.UI.Msgbox("Report GCG_5971_IAM_Pension.rpt not found as an active Report within Report Maintenance.")
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+F.Intrinsic.Control.EndIf
+
+
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst","Select F_LONG From V_OP_HEADER WHERE ID = '401364'")
+F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,=,False)
+	V.Local.sVal.Set(V.ODBC.conX!rst.FieldValTrim!F_LONG)
+Function.Intrinsic.Control.Else
+	V.Local.sVal.Set("1")
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.For(V.Local.iR,1,5,1)
+	F.Intrinsic.Variable.UDTMultiSeek(V.uGlobal.uWeeks!Week_No,V.Local.iR,V.Local.sRet)
+	Function.Intrinsic.Control.If(V.Local.sRet.Trim,<>,"")
+		Function.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sret)
+		F.Intrinsic.String.Format(V.uGlobal.uWeeks(v.Local.sRet(0))!Start_Date,"MM/DD/YY",V.Local.sStart)
+		F.Intrinsic.String.Format(V.uGlobal.uWeeks(v.Local.sRet(0))!End_Date,"MM/DD/YY",V.Local.sEnd)
+		V.Local.sWeeks(v.Local.iR).Set(V.Local.sStart)
+		V.Local.sWeekE(v.Local.iR).Set(V.Local.sEnd)
+	Function.Intrinsic.Control.Else
+		V.Local.sWeeks(v.Local.iR).Set("")
+	Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iR)
+
+
+
+V.Local.sParam.Set("NAMEFormat*!*BIRUNID*!*NUMBERWEEKS*!*WEEK1*!*WEEK2*!*WEEK3*!*WEEK4*!*WEEK5*!*Week1E*!*Week2E*!*Week3E*!*Week4E*!*Week5E")
+F.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}*!*{5}*!*{6}*!*{7}",V.Local.sVal,V.Global.iBIRUNID,V.Screen.SS_Form1!ddlWeekNo.Text,V.Local.sWeeks(1).Trim,V.Local.sWeeks(2).Trim,V.Local.sWeeks(3).Trim,V.Local.sWeeks(4).Trim,V.Local.sWeeks(5).TRIM,V.Local.sVal)
+F.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}*!*{5}",V.Local.sVal,V.Local.sWeekE(1).Trim,V.Local.sWeekE(2).Trim,V.Local.sWeekE(3).Trim,V.Local.sWeekE(4).Trim,V.Local.sWeekE(5).Trim,V.Local.sVal)
+f.Global.BI.StopLogging(v.Global.iLogID)
+
+F.Intrinsic.String.Split(V.Local.sParam,"*!*",V.Local.sParam)
+F.Intrinsic.String.Split(V.Local.sVal,"*!*",V.Local.sVal)
+
+F.Global.BI.PrintReport(V.Local.sRPTID,16,V.Local.sParam,V.Local.sVal,"",False)
+
+'F.Global.BI.RunReportPreProcessor(V.Global.iBIRUNID,V.Global.iLogID,V.Local.sParam,V.Local.sVal,"",-1,True,"",-1,"",-1,"","",V.Global.iLogID)
+
+'after we show it show our screen again
+V.uGlobal.uEmpTime.Redim(-1,-1)
+V.uGlobal.uDept.Redim(-1,-1)
+V.uGlobal.uWeeks.Redim(-1,-1)
+F.Intrinsic.UI.CloseWaitDialog
+Gui.SS_Form1..Visible(True)
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("CALLBI_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5971_IAM_Pension.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.CALLBI.End
+
+program.sub.txtdeptstart_gotfocus.start
+Gui.SS_Form1.txtDeptStart.SelectAll
+
+
+program.sub.txtdeptstart_gotfocus.end
+
+program.sub.txtdeptend_gotfocus.start
+
+Gui.SS_Form1.txtDeptEnd.SelectAll
+
+program.sub.txtdeptend_gotfocus.end
+
+program.sub.txtdeptstart_lostfocus.start
+
+Gui.SS_Form1.txtDeptEnd.Text(V.Screen.SS_Form1!txtDeptStart.Text)
+
+program.sub.txtdeptstart_lostfocus.end
+
+Program.Sub.Comments.Start
+${$0$}$$}$TRT$}$10/8/2015 5:40:31 PM
+${$3$}$0$}$$}$0$}$-1$}$$}$12:00:00 AM$}$QUote: 6502-2
+Code: TRT
+Start Date 10/1/2015
+
+
+GAB script and Crystal report, to report Employee hours for the IAM National Pension plan.  Report detail will be:
+SSN, Last Name, First Name, Middle Initial, Suffix, Week 1, Week 2, Week 3, Week 4, Week 5 (if applicable), Total.
+Weeks will be determined as weeks up to a provided cutoff date, where weeks are Monday ? Sunday.
+The report will print details for all employees of selected departments.  For each Employee, all earned hours will be totaled by week, and that total (up to 40 hours) will print under the appropriate Week# bucket, for the month.  A total of all employee hours, for the month will print under the Total bucket.  A grand total of all hours will print at the end of the report.
+
+
+Program.Sub.Comments.End
+Program.Sub.ScreenSS.Start
+SS_Form1{{CAPTION::IAM Pension- Weekly Hours Report
+SS_Form1.CTRL{{NAME::dtpEndDate\\TYPE::6\\CAPTION::Period End Date\\GROUP::-1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::ddlWeekNo\\TYPE::4\\CAPTION::# of Weeks\\GROUP::-1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::txtDeptStart\\TYPE::2\\CAPTION::Beginning Department\\GROUP::1\\BROWSER::1\\SIZE::1
+SS_Form1.CTRL{{NAME::txtDeptEnd\\TYPE::2\\CAPTION::Ending Department\\GROUP::1\\BROWSER::1\\SIZE::1
+SS_Form1.CTRL{{NAME::cmdDelete\\TYPE::5\\CAPTION::Delete\\GROUP::2\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::cmdClear\\TYPE::5\\CAPTION::Clear\\GROUP::2\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::lvwDept\\TYPE::7\\GROUP::-1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::cmdOk\\TYPE::5\\CAPTION::Ok\\GROUP::-1\\BROWSER::0\\SIZE::1
+
+Program.Sub.ScreenSS.End
+
